@@ -1,29 +1,19 @@
 {
   "compilerOptions": {
-    "outDir": "build/dist",
-    "module": "esnext",
-    "target": "es5",
-    "lib": ["es6", "dom","esnext.asynciterable"],
-    "sourceMap": true,
-    "allowJs": true,
-    "jsx": "react",
-    "moduleResolution": "node",
-    "rootDir": "src",
-    "forceConsistentCasingInFileNames": true,
-    "noImplicitReturns": true,
-    "noImplicitThis": true,
+    "outDir": "./public/",        // path to output directory
+    "lib": ["DOM", "ES5", "ScriptHost", "ES2015","esnext.asynciterable"],
+    "sourceMap": true,          // allow sourcemap support
+    "strictNullChecks": true,   // enable strict null checks as a best practice
+    "module": "es6",            // specifiy module code generation
+    "jsx": "react",             // use typescript to transpile jsx to js
+    "target": "es5",            // specify ECMAScript target version
+    "allowSyntheticDefaultImports": true,
     "noImplicitAny": true,
-    "strictNullChecks": true,
+    "noUnusedLocals": true,
     "suppressImplicitAnyIndexErrors": true,
-    "noUnusedLocals": true
+    "moduleResolution": "node"
   },
-  "exclude": [
-    "node_modules",
-    "build",
-    "scripts",
-    "acceptance-tests",
-    "webpack",
-    "jest",
-    "src/setupTests.ts"
+  "include": [
+    "./src/"
   ]
 }
